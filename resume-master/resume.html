@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8">
+  <title>高培雄的简历</title>
+
+	<link rel="stylesheet" href="./lib/jquery.fullPage.css" />
+  <link rel="stylesheet" href="./lib/neat.css">
+  <link rel="stylesheet" href="./css/layout.css">
+
+	<script src="./lib/jquery.min.js"></script>
+	<script src="./lib/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="./lib/jquery.fullPage.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#1f113a', 'whitesmoke', '#003333', '#7BAABE',  '#ccddff'],
+				navigation: true,
+			  navigationPosition: 'right'
+
+			});
+		});
+	</script>
+</head>
+<body>
+
+<div id="fullpage">
+	<div class="section active" id="section0">
+		<div id="inform">
+      <h1>Hi，我是高培雄</h1>
+      <p>
+        我是来自<br>
+        陕西学前师范学院 数学与应用数学专业 本科三年级<br>
+        的学生，现在想寻找<br>
+        一份 <span class="important">web 前端相关</span> 的 实习职位<br>
+      </p>
+      <p>
+        <i class="icon" style="background-position: 0 30px"></i>
+        <span>坐标：北京</span>
+      </p>
+      <p>
+        <i class="icon" style="background-position: 0 0">
+        </i><span>时间：7月中旬（不少于三个月）</span>
+      </p>
+		</div>
+	</div>
+
+	<div class="section" id="section1">
+		<div id="introduction">
+			<div id ="personal">
+				<div id="logo">
+					<img src="./resource/avatar.jpg">
+				</div>
+				<h2>高培雄</h2>
+				<p><i class="info" style="background-position: 0 0"></i>18392491219</p>
+				<p><i class="info" style="background-position: 0 -30px"></i>944451058@qq.com</p>
+				<p><i class="info" style="background-position: 0 -60px"></i><a href="https://www.github.com/posebear1990">https://github.com/posebear1990</a></p>
+			</div>
+			<div id="main">
+			<p>
+			熟悉 <span class="important">HTML / CSS</span>，能独立完成基础的网页布局，熟悉 <span class="important">JavaScript</span>，会使用常用的 <span class="important">DOM</span> 操作，熟悉 <span class="important">jQuery</span> 的基本操作。对 <span class="important">HTML5 / CSS3</span> 新特性有一定了解。</p>
+			<p>对 Web 后端有所了解，能使用 <span class="important">PHP / Ruby on Rails + MySQL</span> 搭建简单的网站。</p>
+			<p>熟悉常用 <span class="important">Linux</span> 命令，能在日常使用 <span class="important">GitHub</span> 与 <span class="important">Sublime Text</span> 进行程序开发。能够使用 <span class="important">Photoshop</span> 完成简单的操作。</p>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="section" id="section2">
+		<div id="exper">
+      <h1>实习经历：</h1>
+      <p>2015.03-2015.04<br>
+      西安理飨农业科技有限公司<br>
+      学习了Rails的基本使用，参与开发了企业内部公众号管理网站的公众号菜单管理功能。</p>
+
+      <h1>项目经历：</h1>
+      <p><a href="http://www.diandiandidi.me/">我的点点滴滴</a>（开发中）：一个记录个人生活的写作网站。由最开始的纯 PHP 实现到 CI 框架实现再到 Rails+HTML/CSS/jQuery 实现，期间积累了不少开发经验。</p>
+
+      <h1>练习作品：</h1>
+      <p><a href="https://github.com/posebear1990/siteCopy">仿站</a>: 两个练习 HTML/CSS 时制作的仿站。<br>
+      <a href="https://github.com/posebear1990/jWriter">jWriter</a>: 一些 jQuery 实现的写作网站效果。<br>
+      <a href="https://github.com/posebear1990/jQ-Ay">jQ-Ay</a>: 练习 DOM 操作时制作的单页问答App。</p>
+    </div>
+	</div>
+	<div class="section" id="section3">
+		<div id="contact">
+	    <h1>More About Me</h1>
+	    <div class="clearfix">
+	      <a class="about" href="http://www.cnblogs.com/bear-lab/" style="background-position: 0 -40px" title="blog"></a>
+	      <a class="about" href="https://www.github.com/posebear1990" style="background-position: -160px -40px" title="github"></a>
+	      <a class="about" href="https://www.twitter.com/posebear1990" style="background-position: 0 0" title="twitter"></a>
+	      <a class="about" href="http://www.douban.com/people/posebear1990/" style="background-position: -40px -40px" title="douban"></a>
+	      <a class="about" href="http://www.weibo.com/posebear1990" style="background-position: -160px 0" title="weibo"></a>
+	    </div>
+	    <a id="download" href="http://www.weibo.com/posebear1990" title="下载PDF简历">下载PDF简历</a>
+  	</div>
+	</div>
+</div>
+
+</body>
+</html>
