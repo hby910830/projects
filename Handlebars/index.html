@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>模板引擎</title>
+</head>
+<body>
+	<div class="container"></div>
+
+	<script id="entry-template" type="text/x-handlebars-template">
+		<div class="entry">
+			<h1>{{title}}</h1>
+			<div class="body">
+				{{fullName firstName lastName}}
+
+				<br>
+
+				{{firstName}} {{lastName}}
+		
+		<!-- 三个花括号添加带HTML文本 -->
+				{{{content}}} 
+
+		<!-- 不做解析，直接输出标识 -->
+			<!-- 	{{{{raw}}}}
+				  {{name}}
+				{{{{/raw}}}} -->
+
+				{{#if firstName}}
+					{{fullName firstName lastName}}
+				{{else}}
+					{{lastName}}
+				{{/if}}
+
+				<!--遍历-->
+				<ul>
+				{{#each items}}
+				   <li>{{text}}</li>	
+				{{/each}}	
+				</ul>
+				<hr>
+				{{#list people}}
+					{{firstName}}{{las}}
+				{{/list}}
+			</div>
+		</div>
+	</script>
+
+	<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="./handlebars-v4.0.5.js"></script>
+
+	<script type="text/javascript">
+		var context = {
+			title: 'test handlebars template',
+			firstName: 'Han',
+			lastName: 'baoyi',
+			content: '<p>Hello</p>',
+			items: [
+				{text: 123},
+				{text: 456},
+				{text: 789},
+				{text: 234},
+				{text: 567},
+				{text: 890},
+				{text: 444}
+			],
+			people:[
+				{firstName: 'Tom', lastName: '1'},
+				{firstName: 'Jack', lastName: '2'},
+				{firstName: 'Jhone', lastName: '3'}			]
+		}
+
+		Handlebars.registerHelper('fullName', function(firstName,lastName){
+			return firstName + ' ' + lastName;
+		})
+
+		Handlebars.registerHelper('list', function(items, options){
+			var out = '<ul>';
+			for(var i=0; i<items.length; i++){
+				out = out + '<li>' + items[i].firstName + ' ' + items[i].lastName + '</li>'
+			}
+			return out + '</ul>';
+		})
+
+		// Handlebars.registerHelper('raw', function(options){
+		// 	return options.fn();
+		// })
+
+		var source = $('#entry-template').html();
+		var template = Handlebars.compile(source);
+
+		var html = template(context);
+	
+		$('.container').append(html);
+	</script>
+</body>
+</html>
