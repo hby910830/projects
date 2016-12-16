@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>3d旋转</title>
+  <style>
+    *{margin: 0; padding: 0}
+    .container {
+      width: 240px;
+      height: 215px;
+      margin: 100px auto;
+      /* position: relative; */
+      perspective: 1000px;
+    }
+     @keyframes scroll {
+      0% {
+        transform: translateZ(160px) rotateY(0);
+      }
+      100% {
+        transform: translateZ(160px) rotateY(360deg);
+      } 
+    }
+    #slides {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform-style: preserve-3d;
+      transform: translateZ(160px) rotateY(20deg);
+      transition: transform 1s;
+      animation: scroll 10s infinite linear;
+    }
+    #slides > div{
+      width: 240px;
+      height: 215px;
+      background: rgba(255,255,255,.6);
+      position: absolute;
+      font-size: 50px;
+      font-family: '微软雅黑';
+      line-height: 215px;
+      text-align: center;
+      /* backface-visibility:hidden; */
+    }
+    #slides .one {
+      color: green;
+      transform: rotateY(72deg) translateZ(170px);
+    }
+    #slides .two {
+      color: blue;
+      transform: rotateY(144deg) translateZ(170px);
+    }
+    #slides .three {
+      color: pink;
+      transform: rotateY(216deg) translateZ(170px);
+    }
+    #slides .four {
+      color: blue;
+      transform: rotateY(288deg) translateZ(170px);
+    }
+    #slides .five {
+      color: #2467D1;
+      transform: rotateY(360deg) translateZ(170px);
+    }
+   
+  </style>
+</head>
+<body style="background: #0F83D8">
+  <div class="container">
+    <div id="slides">
+      <div class="one">社会共治</div>
+      <div class="two">追溯管理</div>
+      <div class="three">云端管理</div>
+      <div class="four">日常监管</div>
+      <div class="five">数据分析</div>
+    </div>
+  </div>
+</body>
+</html>
